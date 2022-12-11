@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SharedCounter from "./sharedState";
+import FilterableProductTable from "./ProductTable";
 const Counter = () => {
   const [count, setCounter] = useState(0);
   const onClickCounter = () => {
@@ -25,13 +26,14 @@ export default function App() {
   }
   return (
     <>
-      <WelcomeMessage user={user.name} />
+      {/* <WelcomeMessage user={user.name} />
       <WelcomeProfilePic imgUrl={user.imageUrl} />
       {!Loggedin && <WelcomeButton name="Please mark your attendance!" />}
       <div />
       <Counter />
       <Counter />
-      <SharedCounter />
+      <SharedCounter /> */}
+      <FilterableProductTable />
     </>
   );
 }
@@ -39,7 +41,7 @@ export default function App() {
 const user = {
   name: "Hedy Lamarr",
   imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-  imageSize: 90
+  imageSize: 90,
 };
 
 const WelcomeProfilePic = ({ imgUrl }) => {
